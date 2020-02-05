@@ -26,20 +26,20 @@ units can do actions the next turn
 
 ### ranger: + 1 damage, +1 range
 
-		attack 1 engery each (cannot attack diagonally)
-		move 1 engery each (cannot move diagonally)
+		attack 1 energy each (cannot attack diagonally)
+		move 1 energy each (cannot move diagonally)
 		snipe stance: his next attack has +1 range, 2 energy
 	
 ### assasin: + 1 speed, +1 energy
 
-		 attack 1 engery each (cannot attack diagonally)
-		 move 1 engery each (cannot move diagonally)
+		 attack 1 energy each (cannot attack diagonally)
+		 move 1 energy each (cannot move diagonally)
 		 stealth stance: cannot be attacked from more than 1 blockes away, 3 energy
 
 ### fighter: +1 damage, +1 armor
 		 
-	 	 attack 1 engery each (cannot attack diagonally)
-		 move 1 engery each (cannot move diagonally)
+	 	 attack 1 energy each (cannot attack diagonally)
+		 move 1 energy each (cannot move diagonally)
 		 defense stance: cannot be attacked by same lvl unit, 2 energy
 
 ### chests
