@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Black\Assasin.png" />
+    <None Remove="Black\Fighter.png" />
+    <None Remove="Black\Ranger.png" />
+    <None Remove="White\Assasin.png" />
+    <None Remove="White\Fighter.png" />
+    <None Remove="White\Ranger.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Black\Assasin.png" />
+    <EmbeddedResource Include="Black\Fighter.png" />
+    <EmbeddedResource Include="Black\Ranger.png" />
+    <EmbeddedResource Include="White\Assasin.png" />
+    <EmbeddedResource Include="White\Fighter.png" />
+    <EmbeddedResource Include="White\Ranger.png" />
+  </ItemGroup>
+
+</Project>
