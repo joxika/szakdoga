@@ -17,21 +17,24 @@ namespace Szakdoga_console
 
         public string kinekakore = FEHER;
 
-        public int Sor = 0;
-        public int Oszlop = 0;
-        
+        public int Sor = 5;
+        public int Oszlop = 1;
+
 
         static void Main(string[] args)
         {
             var program = new Program();
-            
-            program.Palyafeltoltes();
-            program.Palyakirajzolas();
-            Console.ReadKey();
 
+            while (true)
+            {
+                program.Palyafeltoltes();
+                program.Palyakirajzolas();
+                program.Babukijeloles();
+                Console.Clear();
+            }
         }
-        
-        void Palyafeltoltes() 
+
+        void Palyafeltoltes()
         {
             Urespalyafeltoltes();
             Babuhozzaad(0, 8, BASTYA, FEKETE);
@@ -39,26 +42,26 @@ namespace Szakdoga_console
             Babuhozzaad(48, 56, GYALOG, FEHER);
             Babuhozzaad(56, 64, BASTYA, FEHER);
         }
-        void Urespalyafeltoltes() 
+        void Urespalyafeltoltes()
         {
             for (int i = 0; i < 64; i++)
             {
-                Palya.Add(new Mezo(URESMEZO,URES));
+                Palya.Add(new Mezo(URESMEZO, URES));
             }
         }
-        void Babuhozzaad(int mettol, int meddig, int mit, string tulajdonos) 
+        void Babuhozzaad(int mettol, int meddig, int mit, string tulajdonos)
         {
             for (int i = mettol; i < meddig; i++)
             {
                 Palya[i].tipus = mit;
                 Palya[i].tulajdonos = tulajdonos;
-                
+
             }
         }
-       
-        void Palyakirajzolas() 
+
+        void Palyakirajzolas()
         {
-            Console.WriteLine("{0}-nek a köre van",kinekakore);
+            Console.WriteLine("{0}-nek a köre van", kinekakore);
             Console.WriteLine();
 
             for (int oszlop = 0; oszlop < 8; oszlop++)
@@ -67,25 +70,17 @@ namespace Szakdoga_console
                 {
                     Mezo jelenlegimezo = Palya[oszlop * 8 + sor];
                     Szinbeallitas(jelenlegimezo.tulajdonos);
-                    
+
                     Console.Write(" ");
-                    if (Oszlop == oszlop && Sor == sor)
-                    {
-                        Console.Write("[");
-                    }
+                    Hatterszin(sor, oszlop);
+
                     Console.Write(jelenlegimezo.tipus);
-                    if(Oszlop == oszlop && Sor == sor)
-                    {
-                        Console.Write("]");
-                    }
-                        
-                        
-                    
+                    Console.BackgroundColor = ConsoleColor.Black;
                 }
                 Console.WriteLine();
             }
         }
-        void Szinbeallitas(string tulajdonos) 
+        void Szinbeallitas(string tulajdonos)
         {
             if (tulajdonos == URES)
             {
@@ -100,14 +95,25 @@ namespace Szakdoga_console
                 Console.ForegroundColor = ConsoleColor.Blue;
             }
         }
-        void Lepesbekeres()
+        void Hatterszin(int sor, int oszlop)
         {
+            if (Oszlop == oszlop && Sor == sor)
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+            }
+            if (Oszlop == oszlop - 1 && Sor == sor || Oszlop == oszlop - 1 && Sor == sor + 1 || Oszlop == oszlop - 1 && Sor == sor - 1 || Oszlop == oszlop && Sor == sor - 1 || Oszlop == oszlop && Sor == sor + 1 || Oszlop == oszlop + 1 && Sor == sor - 1 || Oszlop == oszlop + 1 && Sor == sor || Oszlop == oszlop + 1 && Sor == sor + 1)
+            {
+                Console.BackgroundColor = ConsoleColor.Yellow;
+            }
+        }
+        void Babukijeloles()
+        {
+            Console.WriteLine( );
+            Console.Write("sor: ");
             Sor = Convert.ToInt32(Console.ReadLine());
+            Console.Write("oszlop: ");
             Oszlop = Convert.ToInt32(Console.ReadLine());
-            
-
 
         }
-        
     }
 }
