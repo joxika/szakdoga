@@ -17,18 +17,21 @@ namespace Szakdoga_console
 
         public string kinekakore = FEHER;
 
-        public int Sor = 1;
+        public int Sor = 5;
         public int Oszlop = 1;
         
 
         static void Main(string[] args)
         {
             var program = new Program();
-            
-            program.Palyafeltoltes();
-            program.Palyakirajzolas();
-            Console.ReadKey();
 
+            while (true)
+            {
+                program.Palyafeltoltes();
+                program.Palyakirajzolas();
+                program.Babukijeloles();
+                Console.Clear();
+            }
         }
         
         void Palyafeltoltes() 
@@ -61,11 +64,11 @@ namespace Szakdoga_console
             Console.WriteLine("{0}-nek a köre van",kinekakore);
             Console.WriteLine();
 
-            for (int oszlop = 0; oszlop < 8; oszlop++)
-            {
-                for (int sor = 0; sor < 8; sor++)
+             for (int sor = 0; sor < 8; sor++)
                 {
-                    Mezo jelenlegimezo = Palya[oszlop * 8 + sor];
+                for (int oszlop = 0; oszlop < 8; oszlop++)
+                {
+                    Mezo jelenlegimezo = Palya[oszlop + sor *8];
                     Szinbeallitas(jelenlegimezo.tulajdonos);
 
                     Console.Write(" ");
@@ -96,21 +99,21 @@ namespace Szakdoga_console
         {
             if (Oszlop == oszlop && Sor == sor)
             {
-                Console.BackgroundColor = ConsoleColor.Green;
+                Console.BackgroundColor = ConsoleColor.DarkGray;
             }
             if (Oszlop == oszlop - 1 && Sor == sor || Oszlop == oszlop - 1 && Sor == sor + 1 || Oszlop == oszlop - 1 && Sor == sor - 1 || Oszlop == oszlop && Sor == sor - 1 || Oszlop == oszlop && Sor == sor + 1 || Oszlop == oszlop + 1 && Sor == sor - 1 || Oszlop == oszlop + 1 && Sor == sor || Oszlop == oszlop + 1 && Sor == sor + 1)
             {
-                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.BackgroundColor = ConsoleColor.Gray;
             }
         }
-        void Lepesbekeres()
+        void Babukijeloles()
         {
+            Console.WriteLine("sor:");
             Sor = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("oszlop");
             Oszlop = Convert.ToInt32(Console.ReadLine());
-            
-
-
         }
+
         
     }
 }
