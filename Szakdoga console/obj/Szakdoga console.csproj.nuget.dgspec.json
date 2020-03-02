@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nemeth.jonatan\\Desktop\\szakdoga-master\\Szakdoga console\\Szakdoga console\\Szakdoga console.csproj": {}
+    "C:\\Users\\JX\\Desktop\\Szakdoga console\\Szakdoga console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nemeth.jonatan\\Desktop\\szakdoga-master\\Szakdoga console\\Szakdoga console\\Szakdoga console.csproj": {
+    "C:\\Users\\JX\\Desktop\\Szakdoga console\\Szakdoga console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nemeth.jonatan\\Desktop\\szakdoga-master\\Szakdoga console\\Szakdoga console\\Szakdoga console.csproj",
+        "projectUniqueName": "C:\\Users\\JX\\Desktop\\Szakdoga console\\Szakdoga console.csproj",
         "projectName": "Szakdoga console",
-        "projectPath": "C:\\Users\\nemeth.jonatan\\Desktop\\szakdoga-master\\Szakdoga console\\Szakdoga console\\Szakdoga console.csproj",
-        "packagesPath": "C:\\Users\\nemeth.jonatan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nemeth.jonatan\\Desktop\\szakdoga-master\\Szakdoga console\\Szakdoga console\\obj\\",
+        "projectPath": "C:\\Users\\JX\\Desktop\\Szakdoga console\\Szakdoga console.csproj",
+        "packagesPath": "C:\\Users\\JX\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JX\\Desktop\\Szakdoga console\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nemeth.jonatan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\JX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,22 +47,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.2, 3.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
